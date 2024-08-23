@@ -2,7 +2,10 @@ import mongoose from 'mongoose';
 
 export async function connectDB() {
   try {
-    await mongoose.connect(``);
+    await mongoose.connect(
+      `mongodb+srv://${process.env.DB_USER}:${process.env
+        .DB_PASS!}@cluster0.rocppxe.mongodb.net/nextAuth`
+    );
 
     const connection = mongoose.connection;
     connection.on('connected', () => {
