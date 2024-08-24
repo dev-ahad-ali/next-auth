@@ -21,7 +21,7 @@ function LoginPage() {
       console.log('login success', response.data);
       router.push('/profile');
     } catch (error: any) {
-      console.log('signup failed');
+      console.log('login failed');
       toast.error(error.message);
     }
   };
